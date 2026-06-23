@@ -1,0 +1,1046 @@
+{
+  "title": "UAA Landing Page — FUNAAB Student Union",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": {
+    "custom_css": "/* FUNAAB Green Palette */\n:root {\n  --green-primary: #006B3F;\n  --green-bright: #00A859;\n  --green-dark: #003D23;\n  --green-deep: #005531;\n  --green-tint: #E8F5EE;\n  --green-muted: #B8D9C8;\n  --gold: #D4A843;\n  --gold-light: #F5E6B8;\n  --ink: #1A2B23;\n  --muted: #5E6E64;\n  --light-muted: #8A9B90;\n  --white: #FFFFFF;\n  --off-white: #F7FAF8;\n  --line: #D6E5DC;\n  --line-light: #E8F0EB;\n  --success: #00A859;\n  --warning: #D4A843;\n  --danger: #C0392B;\n  --info: #2980B9;\n  --shadow-sm: 0 2px 8px rgba(0,61,35,0.06);\n  --shadow-md: 0 8px 24px rgba(0,61,35,0.1);\n  --shadow-lg: 0 20px 50px rgba(0,61,35,0.15);\n  --shadow-card: 0 4px 16px rgba(0,61,35,0.08);\n  --radius-sm: 6px;\n  --radius-md: 10px;\n  --radius-lg: 14px;\n  --radius-xl: 20px;\n  --transition: all 0.25s ease;\n}\n\n/* Top Bar */\n.uaa-topbar {\n  background: var(--green-dark);\n  color: var(--green-muted);\n  font-size: 13px;\n  padding: 8px 0;\n}\n.uaa-topbar .uaa-container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.uaa-topbar a {\n  color: var(--green-muted);\n  transition: var(--transition);\n}\n.uaa-topbar a:hover {\n  color: var(--white);\n}\n\n/* Header */\n.uaa-header {\n  border-bottom: 1px solid var(--line);\n  padding: 16px 0;\n  background: var(--white);\n  position: sticky;\n  top: 0;\n  z-index: 1000;\n}\n.uaa-header.scrolled {\n  box-shadow: 0 2px 20px rgba(0,61,35,0.08);\n}\n.uaa-header .uaa-container {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n.uaa-logo {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n.uaa-logo-mark {\n  width: 42px;\n  height: 42px;\n  border-radius: var(--radius-sm);\n  background: linear-gradient(135deg, var(--green-bright), var(--green-primary));\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: var(--white);\n  font-weight: 700;\n  font-family: 'Poppins', sans-serif;\n  font-size: 18px;\n}\n.uaa-logo-text {\n  font-family: 'Poppins', sans-serif;\n  font-weight: 700;\n  font-size: 17px;\n  color: var(--green-dark);\n  line-height: 1.15;\n}\n.uaa-logo-text small {\n  display: block;\n  font-family: 'Source Sans 3', sans-serif;\n  font-size: 11px;\n  color: var(--muted);\n  font-weight: 500;\n  letter-spacing: 0.03em;\n}\n.uaa-nav ul {\n  display: flex;\n  gap: 28px;\n  font-size: 14px;\n  font-weight: 500;\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n.uaa-nav a {\n  color: var(--ink);\n  position: relative;\n  transition: var(--transition);\n}\n.uaa-nav a:hover {\n  color: var(--green-primary);\n}\n.uaa-nav a::after {\n  content: '';\n  position: absolute;\n  bottom: -4px;\n  left: 0;\n  width: 0;\n  height: 2px;\n  background: var(--green-primary);\n  transition: width 0.25s ease;\n}\n.uaa-nav a:hover::after {\n  width: 100%;\n}\n.uaa-header-cta {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n}\n.uaa-menu-toggle {\n  display: none;\n  background: none;\n  border: none;\n  cursor: pointer;\n  padding: 8px;\n}\n.uaa-menu-toggle span {\n  display: block;\n  width: 24px;\n  height: 2px;\n  background: var(--ink);\n  margin: 5px 0;\n  transition: var(--transition);\n}\n\n/* Hero */\n.uaa-hero {\n  background: linear-gradient(120deg, rgba(0,61,35,0.92) 0%, rgba(0,107,63,0.85) 100%);\n  color: var(--white);\n  padding: 100px 0 0;\n  position: relative;\n  overflow: hidden;\n}\n.uaa-hero::before {\n  content: '';\n  position: absolute;\n  top: -50%;\n  right: -20%;\n  width: 600px;\n  height: 600px;\n  border-radius: 50%;\n  background: rgba(0,168,89,0.08);\n}\n.uaa-hero-content {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 40px;\n  align-items: center;\n  margin-bottom: 80px;\n}\n.uaa-hero-text {\n  max-width: 680px;\n  position: relative;\n  z-index: 2;\n}\n.uaa-hero-image {\n  position: relative;\n  z-index: 2;\n}\n.uaa-hero-image img {\n  width: 100%;\n  height: 380px;\n  object-fit: cover;\n  border-radius: var(--radius-lg);\n  box-shadow: 0 20px 50px rgba(0,0,0,0.25);\n}\n.uaa-hero h1 {\n  color: var(--white);\n  margin-bottom: 16px;\n}\n.uaa-hero p {\n  color: #C8E8D6;\n  font-size: 16.5px;\n  max-width: 540px;\n}\n.uaa-hero-badge {\n  display: inline-flex;\n  align-items: center;\n  gap: 8px;\n  background: rgba(0,168,89,0.2);\n  border: 1px solid rgba(0,168,89,0.3);\n  padding: 8px 16px;\n  border-radius: 30px;\n  font-size: 13px;\n  color: #A8E6C3;\n  margin-bottom: 20px;\n  font-weight: 500;\n}\n.uaa-hero-badge::before {\n  content: '✓';\n  background: var(--green-bright);\n  color: var(--white);\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 11px;\n  font-weight: 700;\n}\n\n/* Search Panel */\n.uaa-search-wrap {\n  position: relative;\n  z-index: 2;\n}\n.uaa-search-tabs {\n  display: flex;\n  gap: 4px;\n  position: absolute;\n  top: -40px;\n  left: 0;\n}\n.uaa-search-tabs span {\n  background: rgba(255,255,255,0.12);\n  color: var(--white);\n  font-size: 13px;\n  font-weight: 600;\n  padding: 10px 18px;\n  border-radius: 8px 8px 0 0;\n  cursor: default;\n}\n.uaa-search-tabs span.active {\n  background: var(--white);\n  color: var(--green-dark);\n}\n.uaa-search-panel {\n  background: var(--white);\n  border-radius: var(--radius-lg);\n  padding: 22px;\n  display: grid;\n  grid-template-columns: 1fr 1fr 1fr 1fr auto;\n  gap: 14px;\n  box-shadow: 0 30px 60px -25px rgba(0,61,35,0.4);\n  align-items: end;\n}\n.uaa-field label {\n  display: block;\n  font-size: 12px;\n  color: var(--muted);\n  margin-bottom: 6px;\n  font-weight: 600;\n}\n.uaa-field select,\n.uaa-field input {\n  width: 100%;\n  border: 1px solid var(--line);\n  border-radius: var(--radius-sm);\n  padding: 11px 12px;\n  font-size: 14px;\n  color: var(--ink);\n  background: var(--white);\n  transition: var(--transition);\n}\n.uaa-field select:focus,\n.uaa-field input:focus {\n  outline: none;\n  border-color: var(--green-primary);\n  box-shadow: 0 0 0 3px rgba(0,107,63,0.1);\n}\n.uaa-search-panel .uaa-btn {\n  padding: 12px 26px;\n}\n.uaa-hero-spacer {\n  height: 50px;\n}\n\n/* Buttons */\n.uaa-btn {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  gap: 8px;\n  background: var(--green-primary);\n  color: var(--white);\n  padding: 14px 28px;\n  border-radius: var(--radius-sm);\n  font-weight: 600;\n  font-size: 14px;\n  border: none;\n  cursor: pointer;\n  transition: var(--transition);\n  white-space: nowrap;\n  text-decoration: none;\n}\n.uaa-btn:hover {\n  background: var(--green-dark);\n  transform: translateY(-1px);\n  box-shadow: var(--shadow-md);\n}\n.uaa-btn-gold {\n  background: var(--gold);\n  color: var(--green-dark);\n}\n.uaa-btn-gold:hover {\n  background: #C49A38;\n}\n.uaa-btn-outline {\n  background: transparent;\n  border: 1.5px solid var(--white);\n  color: var(--white);\n}\n.uaa-btn-outline:hover {\n  background: rgba(255,255,255,0.15);\n}\n.uaa-btn-outline-green {\n  background: transparent;\n  border: 1.5px solid var(--green-primary);\n  color: var(--green-primary);\n}\n.uaa-btn-outline-green:hover {\n  background: var(--green-primary);\n  color: var(--white);\n}\n.uaa-btn-sm {\n  padding: 10px 20px;\n  font-size: 13px;\n}\n\n/* Sections */\n.uaa-section {\n  padding: 90px 0;\n}\n.uaa-section-head {\n  max-width: 640px;\n  margin-bottom: 48px;\n}\n.uaa-section-head.center {\n  text-align: center;\n  margin: 0 auto 48px;\n}\n.uaa-section-head p {\n  color: var(--muted);\n  margin-top: 10px;\n  font-size: 15px;\n}\n.uaa-eyebrow {\n  color: var(--green-bright);\n  font-weight: 600;\n  letter-spacing: 0.1em;\n  text-transform: uppercase;\n  font-size: 12px;\n  display: block;\n  margin-bottom: 8px;\n  font-family: 'Poppins', sans-serif;\n}\n\n/* Filter Pills */\n.uaa-filter-pills {\n  display: flex;\n  gap: 10px;\n  margin-bottom: 36px;\n  flex-wrap: wrap;\n}\n.uaa-filter-pills span {\n  border: 1px solid var(--line);\n  border-radius: 20px;\n  padding: 8px 18px;\n  font-size: 13.5px;\n  font-weight: 500;\n  color: var(--muted);\n  cursor: pointer;\n  transition: var(--transition);\n}\n.uaa-filter-pills span:hover {\n  border-color: var(--green-primary);\n  color: var(--green-primary);\n}\n.uaa-filter-pills span.active {\n  background: var(--green-primary);\n  color: var(--white);\n  border-color: var(--green-primary);\n}\n\n/* Listings Grid */\n.uaa-listings-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 26px;\n}\n.uaa-listing-card {\n  border: 1px solid var(--line);\n  border-radius: var(--radius-lg);\n  overflow: hidden;\n  transition: var(--transition);\n  background: var(--white);\n  text-decoration: none;\n  color: inherit;\n}\n.uaa-listing-card:hover {\n  box-shadow: var(--shadow-lg);\n  transform: translateY(-4px);\n}\n.uaa-listing-photo {\n  height: 210px;\n  background-size: cover;\n  background-position: center;\n  position: relative;\n}\n.uaa-listing-tag {\n  position: absolute;\n  top: 14px;\n  left: 14px;\n  background: var(--green-primary);\n  color: var(--white);\n  font-size: 11px;\n  font-weight: 700;\n  padding: 5px 12px;\n  border-radius: 5px;\n  text-transform: uppercase;\n  letter-spacing: 0.03em;\n}\n.uaa-listing-tag.rent {\n  background: var(--gold);\n  color: var(--green-dark);\n}\n.uaa-agency-badge {\n  position: absolute;\n  top: 14px;\n  right: 14px;\n  background: var(--white);\n  color: var(--green-primary);\n  font-size: 11px;\n  font-weight: 700;\n  padding: 5px 10px;\n  border-radius: 5px;\n  display: flex;\n  align-items: center;\n  gap: 4px;\n  box-shadow: var(--shadow-sm);\n}\n.uaa-listing-info {\n  padding: 20px;\n}\n.uaa-listing-price {\n  font-family: 'Poppins', serif;\n  font-size: 20px;\n  color: var(--green-primary);\n  margin-bottom: 4px;\n}\n.uaa-listing-price small {\n  color: var(--muted);\n  font-size: 12px;\n  font-family: 'Source Sans 3', sans-serif;\n}\n.uaa-listing-info h4 {\n  font-size: 16px;\n  margin-bottom: 4px;\n  font-family: 'Source Sans 3', sans-serif;\n  color: var(--ink);\n}\n.uaa-listing-loc {\n  font-size: 13px;\n  color: var(--muted);\n  margin-bottom: 14px;\n}\n.uaa-listing-meta {\n  display: flex;\n  gap: 16px;\n  font-size: 12.5px;\n  color: var(--muted);\n  border-top: 1px solid var(--line);\n  padding-top: 12px;\n  margin-bottom: 14px;\n}\n.uaa-agent-row {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n.uaa-agent-row img {\n  width: 32px;\n  height: 32px;\n  border-radius: 50%;\n  object-fit: cover;\n}\n.uaa-agent-row span {\n  font-size: 13px;\n  font-weight: 600;\n  color: var(--ink);\n}\n.uaa-agent-row small {\n  display: block;\n  font-size: 11px;\n  color: var(--green-bright);\n  font-weight: 600;\n}\n\n/* Why Choose Us */\n.uaa-why-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 30px;\n}\n.uaa-why-card {\n  padding: 8px 0;\n}\n.uaa-why-icon {\n  width: 56px;\n  height: 56px;\n  border-radius: var(--radius-md);\n  background: var(--green-tint);\n  color: var(--green-primary);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 22px;\n  margin-bottom: 18px;\n}\n.uaa-why-card h4 {\n  font-size: 17px;\n  margin-bottom: 10px;\n  font-family: 'Source Sans 3', sans-serif;\n  color: var(--ink);\n}\n.uaa-why-card p {\n  color: var(--muted);\n  font-size: 14.5px;\n  margin-bottom: 12px;\n}\n\n/* About */\n.uaa-about-grid {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 60px;\n  align-items: center;\n}\n.uaa-quote-box {\n  border-left: 3px solid var(--green-primary);\n  padding-left: 20px;\n  margin: 20px 0;\n  color: var(--green-dark);\n  font-family: 'Poppins', serif;\n  font-size: 16px;\n  font-style: italic;\n}\n.uaa-quote-by {\n  font-size: 13.5px;\n  color: var(--muted);\n  margin-top: 8px;\n  font-style: normal;\n  font-weight: 600;\n}\n\n/* Stats */\n.uaa-stats {\n  background: var(--green-dark);\n  color: var(--white);\n  padding: 60px 0;\n}\n.uaa-stats-grid {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  text-align: center;\n}\n.uaa-stats-grid h3 {\n  color: var(--white);\n  font-size: 40px;\n  margin-bottom: 4px;\n}\n.uaa-stats-grid p {\n  color: #7FBF9A;\n  font-size: 12.5px;\n  text-transform: uppercase;\n  letter-spacing: 0.04em;\n}\n\n/* Services Split */\n.uaa-services-split {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 50px;\n  align-items: center;\n}\n.uaa-check-list {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n.uaa-check-list li {\n  display: flex;\n  gap: 12px;\n  padding: 14px 0;\n  border-bottom: 1px solid var(--line);\n  font-size: 14.5px;\n  color: var(--ink);\n}\n.uaa-check-list li::before {\n  content: \"✓\";\n  color: var(--green-bright);\n  font-weight: 700;\n  flex: 0 0 20px;\n}\n\n/* Contact */\n.uaa-contact-grid {\n  display: grid;\n  grid-template-columns: 1.1fr 1fr;\n  gap: 50px;\n}\n.uaa-form-row {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 16px;\n  margin-bottom: 16px;\n}\n.uaa-form-field {\n  margin-bottom: 16px;\n}\n.uaa-form-field label {\n  display: block;\n  font-size: 13px;\n  font-weight: 600;\n  margin-bottom: 6px;\n  color: var(--ink);\n}\n.uaa-form-field input,\n.uaa-form-field select,\n.uaa-form-field textarea {\n  width: 100%;\n  border: 1px solid var(--line);\n  border-radius: var(--radius-sm);\n  padding: 12px;\n  font-size: 14px;\n  transition: var(--transition);\n}\n.uaa-form-field input:focus,\n.uaa-form-field select:focus,\n.uaa-form-field textarea:focus {\n  outline: none;\n  border-color: var(--green-primary);\n  box-shadow: 0 0 0 3px rgba(0,107,63,0.1);\n}\n.uaa-form-field textarea {\n  resize: vertical;\n  min-height: 100px;\n}\n.uaa-full-row {\n  margin-bottom: 16px;\n}\n\n/* CTA Band */\n.uaa-cta-band {\n  background: linear-gradient(120deg, var(--green-primary), var(--green-dark));\n  color: var(--white);\n  padding: 70px 0;\n  text-align: center;\n}\n.uaa-cta-band h2 {\n  color: var(--white);\n  font-size: 28px;\n  margin-bottom: 12px;\n}\n.uaa-cta-band p {\n  color: #A8E6C3;\n  max-width: 560px;\n  margin: 0 auto 26px;\n}\n.uaa-cta-buttons {\n  display: flex;\n  gap: 14px;\n  justify-content: center;\n}\n\n/* Footer */\n.uaa-footer {\n  background: var(--green-dark);\n  color: #7FBF9A;\n  padding: 60px 0 26px;\n}\n.uaa-footer-grid {\n  display: grid;\n  grid-template-columns: 2fr 1fr 1fr 1.3fr;\n  gap: 40px;\n  margin-bottom: 44px;\n}\n.uaa-footer-grid h5 {\n  color: var(--white);\n  font-size: 13.5px;\n  margin-bottom: 16px;\n  text-transform: uppercase;\n  letter-spacing: 0.03em;\n  font-family: 'Source Sans 3', sans-serif;\n}\n.uaa-footer-grid ul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n.uaa-footer-grid li {\n  margin-bottom: 9px;\n  font-size: 13.5px;\n}\n.uaa-footer-grid a:hover {\n  color: var(--white);\n}\n.uaa-footer-bottom {\n  border-top: 1px solid #0A3A1E;\n  padding-top: 22px;\n  display: flex;\n  justify-content: space-between;\n  font-size: 12.5px;\n  color: #4A8A65;\n}\n\n/* Scroll Animations */\n.uaa-animate-on-scroll {\n  opacity: 0;\n  transform: translateY(30px);\n  transition: opacity 0.7s ease-out, transform 0.7s ease-out;\n}\n.uaa-animate-on-scroll.is-visible {\n  opacity: 1;\n  transform: translateY(0);\n}\n.uaa-animate-on-scroll .uaa-why-card,\n.uaa-animate-on-scroll .uaa-listing-card,\n.uaa-animate-on-scroll .uaa-stats-grid > div {\n  opacity: 0;\n  transform: translateY(20px);\n  transition: opacity 0.5s ease-out, transform 0.5s ease-out;\n}\n.uaa-animate-on-scroll.is-visible .uaa-why-card,\n.uaa-animate-on-scroll.is-visible .uaa-listing-card,\n.uaa-animate-on-scroll.is-visible .uaa-stats-grid > div {\n  opacity: 1;\n  transform: translateY(0);\n}\n.uaa-animate-on-scroll.is-visible .uaa-why-card:nth-child(1),\n.uaa-animate-on-scroll.is-visible .uaa-listing-card:nth-child(1),\n.uaa-animate-on-scroll.is-visible .uaa-stats-grid > div:nth-child(1) {\n  transition-delay: 0.1s;\n}\n.uaa-animate-on-scroll.is-visible .uaa-why-card:nth-child(2),\n.uaa-animate-on-scroll.is-visible .uaa-listing-card:nth-child(2),\n.uaa-animate-on-scroll.is-visible .uaa-stats-grid > div:nth-child(2) {\n  transition-delay: 0.2s;\n}\n.uaa-animate-on-scroll.is-visible .uaa-why-card:nth-child(3),\n.uaa-animate-on-scroll.is-visible .uaa-listing-card:nth-child(3),\n.uaa-animate-on-scroll.is-visible .uaa-stats-grid > div:nth-child(3) {\n  transition-delay: 0.3s;\n}\n.uaa-animate-on-scroll.is-visible .uaa-stats-grid > div:nth-child(4) {\n  transition-delay: 0.4s;\n}\n\n/* Responsive */\n@media (max-width: 980px) {\n  .uaa-nav { display: none; }\n  .uaa-header-cta { display: none; }\n  .uaa-menu-toggle { display: block; }\n  .uaa-hero-content { grid-template-columns: 1fr; margin-bottom: 60px; }\n  .uaa-hero-image { display: none; }\n  .uaa-search-panel { grid-template-columns: 1fr; }\n  .uaa-listings-grid, .uaa-why-grid, .uaa-about-grid, .uaa-services-split, .uaa-contact-grid { grid-template-columns: 1fr; }\n  .uaa-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }\n  .uaa-footer-grid { grid-template-columns: 1fr 1fr; }\n}\n@media (max-width: 600px) {\n  .uaa-hero { padding: 60px 0 0; }\n  .uaa-hero h1 { font-size: 24px; }\n  .uaa-search-tabs { display: none; }\n  .uaa-hero-spacer { height: 30px; }\n  .uaa-section { padding: 50px 0; }\n  .uaa-listings-grid { grid-template-columns: 1fr; }\n  .uaa-stats-grid { grid-template-columns: 1fr 1fr; gap: 20px; }\n  .uaa-stats-grid h3 { font-size: 28px; }\n  .uaa-form-row { grid-template-columns: 1fr; }\n  .uaa-cta-buttons { flex-direction: column; align-items: center; }\n  .uaa-footer-grid { grid-template-columns: 1fr; }\n  .uaa-footer-bottom { flex-direction: column; gap: 8px; text-align: center; }\n}",
+    "custom_colors": [
+      {
+        "color": "#006B3F",
+        "title": "FUNAAB Green Primary"
+      },
+      {
+        "color": "#00A859",
+        "title": "FUNAAB Green Bright"
+      },
+      {
+        "color": "#003D23",
+        "title": "FUNAAB Green Dark"
+      },
+      {
+        "color": "#E8F5EE",
+        "title": "FUNAAB Green Tint"
+      },
+      {
+        "color": "#D4A843",
+        "title": "FUNAAB Gold"
+      }
+    ],
+    "custom_typography": [
+      {
+        "tag": "h1",
+        "typography_typography": "custom",
+        "typography_font_family": "Poppins",
+        "typography_font_size": {"unit": "px", "size": 40, "sizes": []},
+        "typography_font_weight": "700"
+      },
+      {
+        "tag": "h2",
+        "typography_typography": "custom",
+        "typography_font_family": "Poppins",
+        "typography_font_size": {"unit": "px", "size": 32, "sizes": []},
+        "typography_font_weight": "700"
+      },
+      {
+        "tag": "body",
+        "typography_typography": "custom",
+        "typography_font_family": "Source Sans 3",
+        "typography_font_size": {"unit": "px", "size": 16, "sizes": []},
+        "typography_font_weight": "400"
+      }
+    ]
+  },
+  "content": [
+    {
+      "id": "topbar01",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": {"unit": "px", "size": 1200, "sizes": []},
+        "padding": {"unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": false},
+        "background_background": "classic",
+        "background_color": "#003D23"
+      },
+      "elements": [
+        {
+          "id": "topbar02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_direction": "row",
+            "justify_content": "space-between",
+            "align_items": "center",
+            "padding": {"unit": "px", "top": "8", "right": "24", "bottom": "8", "left": "24", "isLinked": false}
+          },
+          "elements": [
+            {
+              "id": "topbar03",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<span style=\"color: #B8D9C8; font-size: 13px;\">An Official Initiative of the SUG Welfare Directorate, FUNAAB</span>"
+              }
+            },
+            {
+              "id": "topbar04",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<span style=\"color: #B8D9C8; font-size: 13px;\">Support: <a href=\"mailto:welfare@sug.funaab.edu.ng\" style=\"color: #B8D9C8; text-decoration: none;\">welfare@sug.funaab.edu.ng</a></span>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "header01",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": {"unit": "px", "size": 1200, "sizes": []},
+        "padding": {"unit": "px", "top": "16", "right": "0", "bottom": "16", "left": "0", "isLinked": false},
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "border_border": "solid",
+        "border_width": {"unit": "px", "top": "0", "right": "0", "bottom": "1", "left": "0", "isLinked": false},
+        "border_color": "#D6E5DC",
+        "_position": "sticky",
+        "_z_index": 1000
+      },
+      "elements": [
+        {
+          "id": "header02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_direction": "row",
+            "justify_content": "space-between",
+            "align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "header03",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "row",
+                "align_items": "center",
+                "gap": {"unit": "px", "size": 10, "sizes": []}
+              },
+              "elements": [
+                {
+                  "id": "header04",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"uaa-logo\"><div class=\"uaa-logo-mark\">U</div><div class=\"uaa-logo-text\">Union Accommodation Agency<small>FUNAAB Student Union</small></div></div>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "header05",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "row",
+                "align_items": "center",
+                "gap": {"unit": "px", "size": 28, "sizes": []}
+              },
+              "elements": [
+                {
+                  "id": "header06",
+                  "elType": "widget",
+                  "widgetType": "nav-menu",
+                  "settings": {
+                    "menu": [
+                      {"item": "listings", "title": "Listings", "url": "#listings"},
+                      {"item": "agents", "title": "Our Agents", "url": "#agents"},
+                      {"item": "about", "title": "About", "url": "#about"},
+                      {"item": "how", "title": "How It Works", "url": "#how"},
+                      {"item": "contact", "title": "Contact", "url": "#contact"}
+                    ],
+                    "menu_font_size": {"unit": "px", "size": 14, "sizes": []},
+                    "menu_font_weight": "500",
+                    "menu_text_color": "#1A2B23",
+                    "menu_hover_color": "#006B3F"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "header07",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "row",
+                "align_items": "center",
+                "gap": {"unit": "px", "size": 12, "sizes": []}
+              },
+              "elements": [
+                {
+                  "id": "header08",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Log In",
+                    "button_type": "outline",
+                    "button_size": "sm",
+                    "border_color": "#006B3F",
+                    "text_color": "#006B3F",
+                    "hover_background_color": "#006B3F",
+                    "hover_color": "#FFFFFF"
+                  }
+                },
+                {
+                  "id": "header09",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Apply as Agent",
+                    "button_type": "green",
+                    "button_size": "sm",
+                    "background_color": "#006B3F",
+                    "text_color": "#FFFFFF",
+                    "hover_background_color": "#003D23"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hero01",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": {"unit": "px", "size": 1200, "sizes": []},
+        "padding": {"unit": "px", "top": "100", "right": "0", "bottom": "0", "left": "0", "isLinked": false},
+        "background_background": "gradient",
+        "background_color": "#006B3F",
+        "background_color_b": "#003D23",
+        "_animation": "fadeIn",
+        "_animation_duration": "slow"
+      },
+      "elements": [
+        {
+          "id": "hero02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_direction": "row",
+            "justify_content": "space-between",
+            "align_items": "center",
+            "margin": {"unit": "px", "top": "0", "right": "0", "bottom": "80", "left": "0", "isLinked": false}
+          },
+          "elements": [
+            {
+              "id": "hero03",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "column",
+                "max_width": {"unit": "px", "size": 680, "sizes": []}
+              },
+              "elements": [
+                {
+                  "id": "hero04",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"uaa-hero-badge\">Officially Backed by FUNAAB Student Union</div>"
+                  }
+                },
+                {
+                  "id": "hero05",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Find Verified Off-Campus Housing Through the Union Itself",
+                    "header_size": "h1",
+                    "title_color": "#FFFFFF"
+                  }
+                },
+                {
+                  "id": "hero06",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "Every agent listed here is registered, vetted, and jointly signed off by the SUG Director of Welfare and the Office of the President. This is the Union's own accommodation agency — not a random directory.",
+                    "text_color": "#C8E8D6"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "hero07",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "column"
+              },
+              "elements": [
+                {
+                  "id": "hero08",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {"url": "https://images.unsplash.com/photo-1562774053-701939374585?w=700&q=80"},
+                    "image_size": "full",
+                    "image_height": {"unit": "px", "size": 380, "sizes": []},
+                    "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true},
+                    "box_shadow_box_shadow": "yes",
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_color": "rgba(0,0,0,0.25)",
+                    "box_shadow_blur": 50,
+                    "box_shadow_y": 20
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hero09",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_direction": "column",
+            "padding": {"unit": "px", "top": "0", "right": "0", "bottom": "50", "left": "0", "isLinked": false}
+          },
+          "elements": [
+            {
+              "id": "hero10",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "row",
+                "gap": {"unit": "px", "size": 4, "sizes": []},
+                "margin": {"unit": "px", "top": "0", "right": "0", "bottom": "-40", "left": "0", "isLinked": false},
+                "_position": "absolute",
+                "_offset_y": {"unit": "px", "size": -40, "sizes": []}
+              },
+              "elements": [
+                {
+                  "id": "hero11",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"uaa-search-tabs\"><span class=\"active\">All Listings</span><span>Student Agents</span><span>Outside Agents</span></div>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "hero12",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true},
+                "padding": {"unit": "px", "top": "22", "right": "22", "bottom": "22", "left": "22", "isLinked": true},
+                "box_shadow_box_shadow": "yes",
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_color": "rgba(0,61,35,0.4)",
+                "box_shadow_blur": 60,
+                "box_shadow_y": 30,
+                "box_shadow_offset": -25
+              },
+              "elements": [
+                {
+                  "id": "hero13",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"uaa-search-panel\"><div class=\"uaa-field\"><label>Coverage Area</label><select><option>All Areas</option><option>Camp</option><option>Harmony</option><option>Camp Junction</option><option>Isale-Igbein</option><option>Onikolobo</option></select></div><div class=\"uaa-field\"><label>Room Type</label><select><option>Any Type</option><option>Self-Contained</option><option>Room & Parlour</option><option>Mini Flat</option><option>1 Bedroom</option><option>2 Bedroom</option><option>Shared Room</option></select></div><div class=\"uaa-field\"><label>Price Range</label><select><option>Any Price</option><option>Under ₦150,000</option><option>₦150,000 – ₦300,000</option><option>Above ₦300,000</option></select></div><div class=\"uaa-field\"><label>Agent Type</label><select><option>All Agents</option><option>Student Agent</option><option>Outside Agent</option></select></div><a href=\"#listings\" class=\"uaa-btn\">Search</a></div>"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "listings01",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": {"unit": "px", "size": 1200, "sizes": []},
+        "padding": {"unit": "px", "top": "90", "right": "0", "bottom": "90", "left": "0", "isLinked": false},
+        "_animation": "fadeInUp",
+        "_animation_duration": "slow"
+      },
+      "elements": [
+        {
+          "id": "listings02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_direction": "column"
+          },
+          "elements": [
+            {
+              "id": "listings03",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<div class=\"uaa-section-head\"><span class=\"uaa-eyebrow\">Available Now</span><h2>Featured Listings</h2><p>Rooms and houses posted by agents approved under the Union Accommodation Agency.</p></div>"
+              }
+            },
+            {
+              "id": "listings04",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"uaa-filter-pills\"><span class=\"active\">All</span><span>Self-Contained</span><span>Room & Parlour</span><span>Mini Flat</span><span>Camp</span><span>Harmony</span></div>"
+              }
+            },
+            {
+              "id": "listings05",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "gap": {"unit": "px", "size": 26, "sizes": []}
+              },
+              "elements": [
+                {
+                  "id": "listings06",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"uaa-listings-grid\"><a href=\"#\" class=\"uaa-listing-card\"><div class=\"uaa-listing-photo\" style=\"background-image:url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&q=80');\"><span class=\"uaa-listing-tag rent\">For Rent</span><span class=\"uaa-agency-badge\">✓ Union Agent</span></div><div class=\"uaa-listing-info\"><div class=\"uaa-listing-price\">₦180,000 <small>/year</small></div><h4>Self-Contained Room, Camp</h4><div class=\"uaa-listing-loc\">Off Fatola Street, Camp, Abeokuta</div><div class=\"uaa-listing-meta\"><span>1 Room</span><span>1 Bath</span><span>Self-Con</span></div><div class=\"uaa-agent-row\"><img src=\"https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=100&q=80\" alt=\"Agent\"><div><span>Femi Balogun</span><small>Student Agent · UAA/2026/0142</small></div></div></div></a><a href=\"#\" class=\"uaa-listing-card\"><div class=\"uaa-listing-photo\" style=\"background-image:url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500&q=80');\"><span class=\"uaa-listing-tag rent\">For Rent</span><span class=\"uaa-agency-badge\">✓ Union Agent</span></div><div class=\"uaa-listing-info\"><div class=\"uaa-listing-price\">₦260,000 <small>/year</small></div><h4>Mini Flat, Harmony</h4><div class=\"uaa-listing-loc\">Harmony Estate, Abeokuta</div><div class=\"uaa-listing-meta\"><span>2 Rooms</span><span>1 Bath</span><span>Mini Flat</span></div><div class=\"uaa-agent-row\"><img src=\"https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80\" alt=\"Agent\"><div><span>Aisha Mohammed</span><small>Student Agent · UAA/2026/0098</small></div></div></div></a><a href=\"#\" class=\"uaa-listing-card\"><div class=\"uaa-listing-photo\" style=\"background-image:url('https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=500&q=80');\"><span class=\"uaa-listing-tag rent\">For Rent</span><span class=\"uaa-agency-badge\">✓ Union Agent</span></div><div class=\"uaa-listing-info\"><div class=\"uaa-listing-price\">₦140,000 <small>/year</small></div><h4>Shared Room, Camp Junction</h4><div class=\"uaa-listing-loc\">Camp Junction, Abeokuta</div><div class=\"uaa-listing-meta\"><span>1 Room</span><span>Shared Bath</span><span>Shared</span></div><div class=\"uaa-agent-row\"><img src=\"https://images.unsplash.com/photo-1556157382-97eda2d62296?w=100&q=80\" alt=\"Agent\"><div><span>Chidi Nwosu Agency</span><small>Outside Agent · UAA/2026/0176</small></div></div></div></a></div>"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why01",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": {"unit": "px", "size": 1200, "sizes": []},
+        "padding": {"unit": "px", "top": "90", "right": "0", "bottom": "90", "left": "0", "isLinked": false},
+        "background_background": "classic",
+        "background_color": "#E8F5EE",
+        "_animation": "fadeInUp",
+        "_animation_duration": "slow"
+      },
+      "elements": [
+        {
+          "id": "why02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_direction": "column"
+          },
+          "elements": [
+            {
+              "id": "why03",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<div class=\"uaa-section-head center\"><span class=\"uaa-eyebrow\">Why It's Different</span><h2>Backed by the Union, Not Just \"Verified\"</h2><p>Three things that separate this from any informal agent you'd meet off the street.</p></div>"
+              }
+            },
+            {
+              "id": "why04",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "gap": {"unit": "px", "size": 30, "sizes": []}
+              },
+              "elements": [
+                {
+                  "id": "why05",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"uaa-why-grid\"><div class=\"uaa-why-card\"><div class=\"uaa-why-icon\">✓</div><h4>Dual Sign-Off Approval</h4><p>Every agent is approved by both the SUG Director of Welfare and the Office of the President before they're allowed to operate.</p></div><div class=\"uaa-why-card\"><div class=\"uaa-why-icon\">🛡</div><h4>ID & Business Verified</h4><p>NIN or CAC documents, matric numbers, and office addresses are checked before any agent goes live.</p></div><div class=\"uaa-why-card\"><div class=\"uaa-why-icon\">⚑</div><h4>Report & Accountability</h4><p>Every agent can be reported directly to the Welfare office — and the Union, not just the agent, is accountable for the outcome.</p></div></div>"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about01",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": {"unit": "px", "size": 1200, "sizes": []},
+        "padding": {"unit": "px", "top": "90", "right": "0", "bottom": "90", "left": "0", "isLinked": false},
+        "background_background": "classic",
+        "background_color": "#E8F5EE",
+        "_animation": "fadeInUp",
+        "_animation_duration": "slow"
+      },
+      "elements": [
+        {
+          "id": "about02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_direction": "row",
+            "justify_content": "space-between",
+            "align_items": "center",
+            "gap": {"unit": "px", "size": 60, "sizes": []}
+          },
+          "elements": [
+            {
+              "id": "about03",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "column"
+              },
+              "elements": [
+                {
+                  "id": "about04",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<span class=\"uaa-eyebrow\">About the Agency</span>"
+                  }
+                },
+                {
+                  "id": "about05",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "The Union's Own Accommodation Agency",
+                    "header_size": "h2"
+                  }
+                },
+                {
+                  "id": "about06",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "This platform exists because students were dealing with housing agents nobody could vouch for. The SUG Welfare Directorate decided to fix that — not by writing a warning, but by building its own agency, with its own registered agents, working directly for the Union's interest.",
+                    "text_color": "#5E6E64"
+                  }
+                },
+                {
+                  "id": "about07",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"uaa-quote-box\">\"An agent on this platform isn't just someone we checked — they're someone the Union itself stands behind.\"<div class=\"uaa-quote-by\">— SUG Director of Welfare</div></div>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "about08",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "column"
+              },
+              "elements": [
+                {
+                  "id": "about09",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {"url": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=700&q=80"},
+                    "image_size": "full",
+                    "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true},
+                    "box_shadow_box_shadow": "yes",
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_color": "rgba(0,61,35,0.15)",
+                    "box_shadow_blur": 50,
+                    "box_shadow_y": 20
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stats01",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": {"unit": "px", "size": 1200, "sizes": []},
+        "padding": {"unit": "px", "top": "60", "right": "0", "bottom": "60", "left": "0", "isLinked": false},
+        "background_background": "classic",
+        "background_color": "#003D23",
+        "_animation": "fadeInUp",
+        "_animation_duration": "slow"
+      },
+      "elements": [
+        {
+          "id": "stats02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_direction": "row",
+            "justify_content": "space-around"
+          },
+          "elements": [
+            {
+              "id": "stats03",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"uaa-stats-grid\"><div><h3 data-count=\"120\" data-suffix=\"+\">0</h3><p>Approved Agents</p></div><div><h3 data-count=\"340\" data-suffix=\"+\">0</h3><p>Active Listings</p></div><div><h3 data-count=\"5\" data-suffix=\"\">0</h3><p>Coverage Areas</p></div><div><h3 data-count=\"2\" data-suffix=\"\">0</h3><p>Sign-Offs Per Agent</p></div></div>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how01",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": {"unit": "px", "size": 1200, "sizes": []},
+        "padding": {"unit": "px", "top": "90", "right": "0", "bottom": "90", "left": "0", "isLinked": false},
+        "_animation": "fadeInUp",
+        "_animation_duration": "slow"
+      },
+      "elements": [
+        {
+          "id": "how02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_direction": "row",
+            "justify_content": "space-between",
+            "align_items": "center",
+            "gap": {"unit": "px", "size": 50, "sizes": []}
+          },
+          "elements": [
+            {
+              "id": "how03",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "column"
+              },
+              "elements": [
+                {
+                  "id": "how04",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<span class=\"uaa-eyebrow\">How It Works</span>"
+                  }
+                },
+                {
+                  "id": "how05",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "What Approval Actually Covers",
+                    "header_size": "h2"
+                  }
+                },
+                {
+                  "id": "how06",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "An agent doesn't simply sign up. Each application goes through a structured process before it's allowed to go public.",
+                    "text_color": "#5E6E64"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "how07",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "column"
+              },
+              "elements": [
+                {
+                  "id": "how08",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<ul class=\"uaa-check-list\"><li>Full identity, business name, and contact details collected</li><li>NIN slip (individual) or CAC document (business) reviewed</li><li>Matric number and department confirmed for Student Agents</li><li>Reviewed first by the SUG Director of Welfare</li><li>Final joint sign-off from the Office of the President</li></ul>"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact01",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": {"unit": "px", "size": 1200, "sizes": []},
+        "padding": {"unit": "px", "top": "90", "right": "0", "bottom": "90", "left": "0", "isLinked": false},
+        "background_background": "classic",
+        "background_color": "#E8F5EE",
+        "_animation": "fadeInUp",
+        "_animation_duration": "slow"
+      },
+      "elements": [
+        {
+          "id": "contact02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_direction": "row",
+            "justify_content": "space-between",
+            "gap": {"unit": "px", "size": 50, "sizes": []}
+          },
+          "elements": [
+            {
+              "id": "contact03",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "column",
+                "flexGrow": 1.1
+              },
+              "elements": [
+                {
+                  "id": "contact04",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<span class=\"uaa-eyebrow\">Get In Touch</span>"
+                  }
+                },
+                {
+                  "id": "contact05",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Apply or Ask a Question",
+                    "header_size": "h2"
+                  }
+                },
+                {
+                  "id": "contact06",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "Whether you want to apply as an agent or report an issue, the Welfare office responds within 24 hours.",
+                    "text_color": "#5E6E64"
+                  }
+                },
+                {
+                  "id": "contact07",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"uaa-form-row\"><div class=\"uaa-form-field\"><label>Full Name *</label><input type=\"text\" placeholder=\"Your full name\"></div><div class=\"uaa-form-field\"><label>Email Address *</label><input type=\"email\" placeholder=\"you@example.com\"></div></div><div class=\"uaa-form-row\"><div class=\"uaa-form-field\"><label>Phone Number</label><input type=\"text\" placeholder=\"+234\"></div><div class=\"uaa-form-field\"><label>Reason for Contact *</label><select><option>Apply as a Student Agent</option><option>Apply as an Outside Agent</option><option>Report an Agent</option><option>General Question</option></select></div></div><div class=\"uaa-full-row\"><div class=\"uaa-form-field\"><label>Message</label><textarea rows=\"4\" placeholder=\"How can we help you?\"></textarea></div></div><a href=\"#\" class=\"uaa-btn\">Send Message</a>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "contact08",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "column",
+                "flexGrow": 1
+              },
+              "elements": [
+                {
+                  "id": "contact09",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {"url": "https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?w=600&q=80"},
+                    "image_size": "full",
+                    "height": {"unit": "px", "size": 100, "sizes": []},
+                    "object_fit": "cover",
+                    "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cta01",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": {"unit": "px", "size": 1200, "sizes": []},
+        "padding": {"unit": "px", "top": "70", "right": "0", "bottom": "70", "left": "0", "isLinked": false},
+        "background_background": "gradient",
+        "background_color": "#006B3F",
+        "background_color_b": "#003D23",
+        "_animation": "fadeInUp",
+        "_animation_duration": "slow"
+      },
+      "elements": [
+        {
+          "id": "cta02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_direction": "column",
+            "align_items": "center",
+            "text_align": "center"
+          },
+          "elements": [
+            {
+              "id": "cta03",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Want to Become a Union-Recognized Agent?",
+                "header_size": "h2",
+                "title_color": "#FFFFFF"
+              }
+            },
+            {
+              "id": "cta04",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Apply as a Student Agent or Outside Agent and get reviewed for joint Union sign-off.",
+                "text_color": "#A8E6C3"
+              }
+            },
+            {
+              "id": "cta05",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "row",
+                "justify_content": "center",
+                "gap": {"unit": "px", "size": 14, "sizes": []}
+              },
+              "elements": [
+                {
+                  "id": "cta06",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Apply as a Student Agent",
+                    "button_type": "gold",
+                    "background_color": "#D4A843",
+                    "text_color": "#003D23",
+                    "hover_background_color": "#C49A38"
+                  }
+                },
+                {
+                  "id": "cta07",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Apply as an Outside Agent",
+                    "button_type": "outline",
+                    "border_color": "#FFFFFF",
+                    "text_color": "#FFFFFF",
+                    "hover_background_color": "rgba(255,255,255,0.15)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "footer01",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": {"unit": "px", "size": 1200, "sizes": []},
+        "padding": {"unit": "px", "top": "60", "right": "0", "bottom": "26", "left": "0", "isLinked": false},
+        "background_background": "classic",
+        "background_color": "#003D23"
+      },
+      "elements": [
+        {
+          "id": "footer02",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_direction": "row",
+            "flex_wrap": "wrap",
+            "gap": {"unit": "px", "size": 40, "sizes": []},
+            "margin": {"unit": "px", "top": "0", "right": "0", "bottom": "44", "left": "0", "isLinked": false}
+          },
+          "elements": [
+            {
+              "id": "footer03",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "column",
+                "flexGrow": 2
+              },
+              "elements": [
+                {
+                  "id": "footer04",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"uaa-logo\" style=\"margin-bottom:14px;\"><div class=\"uaa-logo-mark\">U</div><div class=\"uaa-logo-text\" style=\"color:#fff;\">Union Accommodation Agency</div></div>"
+                  }
+                },
+                {
+                  "id": "footer05",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "An official housing agency of the FUNAAB Student Union Government, approved under the Welfare Directorate and the Office of the President.",
+                    "text_color": "#7FBF9A"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "footer06",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "column",
+                "flexGrow": 1
+              },
+              "elements": [
+                {
+                  "id": "footer07",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Platform",
+                    "header_size": "h5",
+                    "title_color": "#FFFFFF"
+                  }
+                },
+                {
+                  "id": "footer08",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<ul class=\"uaa-footer-grid ul\"><li><a href=\"#listings\">Listings</a></li><li><a href=\"#agents\">Approval Authority</a></li><li><a href=\"#how\">How It Works</a></li></ul>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "footer09",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "column",
+                "flexGrow": 1
+              },
+              "elements": [
+                {
+                  "id": "footer10",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Agents",
+                    "header_size": "h5",
+                    "title_color": "#FFFFFF"
+                  }
+                },
+                {
+                  "id": "footer11",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<ul class=\"uaa-footer-grid ul\"><li><a href=\"#\">Apply as Student Agent</a></li><li><a href=\"#\">Apply as Outside Agent</a></li><li><a href=\"#\">Agent Dashboard</a></li></ul>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "footer12",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "column",
+                "flexGrow": 1.3
+              },
+              "elements": [
+                {
+                  "id": "footer13",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Contact",
+                    "header_size": "h5",
+                    "title_color": "#FFFFFF"
+                  }
+                },
+                {
+                  "id": "footer14",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<ul class=\"uaa-footer-grid ul\"><li>SUG Welfare Office, FUNAAB</li><li><a href=\"mailto:welfare@sug.funaab.edu.ng\">welfare@sug.funaab.edu.ng</a></li><li><a href=\"tel:+2348000000000\">+234 800 000 0000</a></li></ul>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "footer15",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_direction": "row",
+            "justify_content": "space-between",
+            "border_border": "solid",
+            "border_width": {"unit": "px", "top": "1", "right": "0", "bottom": "0", "left": "0", "isLinked": false},
+            "border_color": "#0A3A1E",
+            "padding": {"unit": "px", "top": "22", "right": "0", "bottom": "0", "left": "0", "isLinked": false}
+          },
+          "elements": [
+            {
+              "id": "footer16",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "© 2026 Union Accommodation Agency — FUNAAB Student Union. All rights reserved.",
+                "text_color": "#4A8A65"
+              }
+            },
+            {
+              "id": "footer17",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Built by P&P Tech",
+                "text_color": "#4A8A65"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
