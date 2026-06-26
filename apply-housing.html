@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply as Housing Agent — FUNAAB SUG</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER (Clean) -->
+<header>
+  <div class="container">
+    <a href="sug-portal.html" class="logo">
+      <div class="logo-mark">S</div>
+      <div class="logo-text">FUNAAB SUG<small>Student Union Government</small></div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="sug-portal.html#home">Home</a></li>
+        <li><a href="sug-portal.html#council">Executive Council</a></li>
+        <li><a href="sug-portal.html#initiatives">Welfare Initiatives</a></li>
+        <li><a href="sug-portal.html#verify">Verification</a></li>
+        <li><a href="sug-portal.html#about">About</a></li>
+        <li><a href="sug-portal.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Housing Agent Partnership Registration</h1>
+    <p>Join the Union Accommodation Agency and become a vetted, SUG-approved housing agent for FUNAAB students.</p>
+  </div>
+</section>
+
+<!-- APPLICATION FORM -->
+<section class="form-section">
+  <div class="container">
+    <div class="form-card">
+      <!-- Agent Type Info -->
+      <div style="background:var(--green-tint);border:1px solid var(--green-muted);border-radius:var(--radius-md);padding:16px 20px;margin-bottom:24px;">
+        <div style="display:flex;gap:20px;flex-wrap:wrap;">
+          <div style="flex:1;min-width:200px;">
+            <strong style="color:var(--green-primary);font-size:13px;">Student Agent</strong>
+            <p style="font-size:12px;color:var(--muted);margin-top:4px;">Must be a current FUNAAB student. Requires Matric Number, Department, and NIN Slip.</p>
+          </div>
+          <div style="flex:1;min-width:200px;">
+            <strong style="color:var(--gold);font-size:13px;">Outside Agent</strong>
+            <p style="font-size:12px;color:var(--muted);margin-top:4px;">Commercial housing agent. Requires CAC Certificate and business registration.</p>
+          </div>
+        </div>
+      </div>
+
+      <form id="housingForm">
+
+        <!-- Applicant Classification -->
+        <div class="form-group">
+          <h4>Applicant Classification</h4>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" name="agent_type" id="student_agent" value="student_agent" checked>
+              <label for="student_agent">
+                <span style="font-weight:700;">Student Agent</span><br>
+                <span style="font-size:11px;color:var(--muted);font-weight:400;">I am a FUNAAB student</span>
+              </label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="agent_type" id="outside_agent" value="outside_agent">
+              <label for="outside_agent">
+                <span style="font-weight:700;">Commercial Outside Agent</span><br>
+                <span style="font-size:11px;color:var(--muted);font-weight:400;">I am a business/individual agent</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bio Data Fields -->
+        <div class="form-group">
+          <h4>Personal Information</h4>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="full_name">Full Legal Name *</label>
+              <input type="text" id="full_name" name="full_name" required placeholder="Enter your full legal name">
+            </div>
+            <div class="form-field">
+              <label for="email">Official Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="whatsapp">Active WhatsApp Number *</label>
+              <input type="tel" id="whatsapp" name="whatsapp" required placeholder="+234">
+            </div>
+            <div class="form-field">
+              <label for="alt_phone">Alternate Phone Number</label>
+              <input type="tel" id="alt_phone" name="alt_phone" placeholder="+234">
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Passport Photo Upload *</label>
+            <div class="file-upload" onclick="document.getElementById('passport').click()">
+              <input type="file" id="passport" name="passport" accept="image/*" required>
+              <div class="file-upload-text">
+                <strong>Click to upload</strong> or drag and drop<br>
+                PNG, JPG (Max 2MB)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Operational & Business Information -->
+        <div class="form-group">
+          <h4>Business Information</h4>
+          <div class="form-field">
+            <label for="business_name">Registered Business Name *</label>
+            <input type="text" id="business_name" name="business_name" required placeholder="e.g., Barry Housing Hub">
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="state">State *</label>
+              <input type="text" id="state" name="state" required placeholder="Ogun">
+            </div>
+            <div class="form-field">
+              <label for="city">City *</label>
+              <input type="text" id="city" name="city" required placeholder="Abeokuta">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="town">Town *</label>
+              <input type="text" id="town" name="town" required placeholder="e.g., Camp">
+            </div>
+            <div class="form-field">
+              <label for="street">Street Address *</label>
+              <input type="text" id="street" name="street" required placeholder="e.g., 12 Fatola Street">
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Target Area Coverage *</label>
+            <div class="checkbox-group">
+              <label class="checkbox-item">
+                <input type="checkbox" name="areas[]" value="Camp">
+                <span>Camp</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="areas[]" value="Cele">
+                <span>Cele</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="areas[]" value="Oluwo">
+                <span>Oluwo</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="areas[]" value="Somorin">
+                <span>Somorin</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="areas[]" value="Isolu">
+                <span>Isolu</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="areas[]" value="Harmony">
+                <span>Harmony</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Institutional Vetting Details -->
+        <div class="form-group">
+          <h4>Institutional Vetting</h4>
+          <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">Student agents must provide their matriculation number for verification. Outside agents are not required to provide this.</p>
+
+          <!-- Student Agent Fields -->
+          <div id="student_fields">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="matric_number">Matric Number * <span style="font-weight:400;color:var(--green-bright);font-size:11px;">(Student Agent Only)</span></label>
+                <input type="text" id="matric_number" name="matric_number" required placeholder="e.g., 2023/1/0142">
+              </div>
+              <div class="form-field">
+                <label for="department">Department *</label>
+                <input type="text" id="department" name="department" required placeholder="e.g., Computer Science">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="college">College *</label>
+              <select id="college" name="college" required>
+                <option value="">Select College</option>
+                <option value="COLPHYS">College of Physical Sciences</option>
+                <option value="COLBIO">College of Biological Sciences</option>
+                <option value="COLCAM">College of Agricultural Management Sciences</option>
+                <option value="COLERM">College of Environmental Resource Management</option>
+                <option value="COLANIM">College of Animal Science</option>
+                <option value="COLMED">College of Medicinal Sciences</option>
+                <option value="COLFEFM">College of Food and Engineering</option>
+                <option value="FAB">Faculty of Arts and Social Sciences</option>
+                <option value="FMS">Faculty of Management Sciences</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Outside Agent Fields -->
+          <div id="outside_fields" style="display:none;">
+            <p style="font-size:13px;color:var(--green-primary);background:var(--green-tint);padding:12px 16px;border-radius:var(--radius-sm);margin-bottom:16px;">
+              <strong>Note:</strong> Outside agents are not required to provide matric number. Instead, you must upload your CAC Certificate for business verification.
+            </p>
+            <div class="form-field">
+              <label for="marital_status">Marital Status</label>
+              <select id="marital_status" name="marital_status">
+                <option value="">Select</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Document Upload -->
+        <div class="form-group">
+          <h4>Legitimacy Documentation</h4>
+
+          <!-- NIN for Student Agents -->
+          <div id="nin_upload" class="form-field">
+            <label>NIN Slip Upload * <span style="font-weight:400;color:var(--green-bright);font-size:11px;">(Student Agents)</span></label>
+            <div class="file-upload" onclick="document.getElementById('nin_doc').click()">
+              <input type="file" id="nin_doc" name="nin_doc" accept="image/*,.pdf" required>
+              <div class="file-upload-text">
+                <strong>Click to upload NIN Slip</strong> or drag and drop<br>
+                PNG, JPG, PDF (Max 5MB)
+              </div>
+            </div>
+          </div>
+
+          <!-- CAC for Outside Agents -->
+          <div id="cac_upload" class="form-field" style="display:none;">
+            <label>CAC Certificate Upload * <span style="font-weight:400;color:var(--gold);font-size:11px;">(Outside Agents)</span></label>
+            <div class="file-upload" onclick="document.getElementById('cac_doc').click()">
+              <input type="file" id="cac_doc" name="cac_doc" accept="image/*,.pdf">
+              <div class="file-upload-text">
+                <strong>Click to upload CAC Certificate</strong> or drag and drop<br>
+                PNG, JPG, PDF (Max 5MB)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div style="margin-top:30px;">
+          <button type="submit" class="btn btn-lg" style="width:100%;">Submit Application</button>
+          <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:12px;">
+            By submitting, you agree to the SUG welfare partnership terms and conditions.
+          </p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="sug-portal.html" class="logo" style="margin-bottom:14px;">
+          <div class="logo-mark">S</div>
+          <div class="logo-text" style="color:#fff;">FUNAAB SUG</div>
+        </a>
+        <p style="font-size:13.5px;color:#7FBF9A;">The official digital portal of the FUNAAB Student Union Government, housing the Union Accommodation Agency and Union Transport Alliance under one unified platform.</p>
+      </div>
+      <div>
+        <h5>Portal</h5>
+        <ul>
+          <li><a href="sug-portal.html#home">Home</a></li>
+          <li><a href="sug-portal.html#council">Executive Council</a></li>
+          <li><a href="sug-portal.html#initiatives">Welfare Initiatives</a></li>
+          <li><a href="sug-portal.html#how">How It Works</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Apply</h5>
+        <ul>
+          <li><a href="apply-housing.html">Apply as Housing Agent</a></li>
+          <li><a href="apply-transport.html">Apply as Transport Partner</a></li>
+          <li><a href="sug-portal.html#verify">Verify Agent/Driver</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>SUG Welfare Office, FUNAAB</li>
+          <li><a href="mailto:welfare@funaabsug.org">welfare@funaabsug.org</a></li>
+          <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 FUNAAB Student Union Government. All rights reserved.</span>
+      <span>Built by P&amp;P Tech</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  var agentType = document.querySelectorAll('input[name="agent_type"]');
+  var studentFields = document.getElementById('student_fields');
+  var outsideFields = document.getElementById('outside_fields');
+  var ninUpload = document.getElementById('nin_upload');
+  var cacUpload = document.getElementById('cac_upload');
+
+  agentType.forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      if (this.value === 'student_agent') {
+        studentFields.style.display = 'block';
+        outsideFields.style.display = 'none';
+        ninUpload.style.display = 'block';
+        cacUpload.style.display = 'none';
+      } else {
+        studentFields.style.display = 'none';
+        outsideFields.style.display = 'block';
+        ninUpload.style.display = 'none';
+        cacUpload.style.display = 'block';
+      }
+    });
+  });
+
+  /* File upload label update */
+  document.querySelectorAll('input[type="file"]').forEach(function(input) {
+    input.addEventListener('change', function() {
+      var fileName = this.files[0] ? this.files[0].name : 'No file selected';
+      var uploadText = this.closest('.file-upload').querySelector('.file-upload-text');
+      if (uploadText) {
+        uploadText.innerHTML = '<strong>' + fileName + '</strong>';
+      }
+    });
+  });
+
+  /* Mobile menu */
+  var menuToggle = document.querySelector('.menu-toggle');
+  var nav = document.querySelector('nav');
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', function() {
+      nav.classList.toggle('open');
+    });
+  }
+
+  /* Form submit (placeholder) */
+  document.getElementById('housingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Application submitted successfully! You will receive a confirmation email shortly.');
+  });
+
+})();
+</script>
+
+</body>
+</html>

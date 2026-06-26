@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply as Transport Partner — FUNAAB SUG</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER (Clean) -->
+<header>
+  <div class="container">
+    <a href="sug-portal.html" class="logo">
+      <div class="logo-mark">S</div>
+      <div class="logo-text">FUNAAB SUG<small>Student Union Government</small></div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="sug-portal.html#home">Home</a></li>
+        <li><a href="sug-portal.html#council">Executive Council</a></li>
+        <li><a href="sug-portal.html#initiatives">Welfare Initiatives</a></li>
+        <li><a href="sug-portal.html#verify">Verification</a></li>
+        <li><a href="sug-portal.html#about">About</a></li>
+        <li><a href="sug-portal.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Transport Operator Partnership Registration</h1>
+    <p>Join the Union Transport Alliance and become a SUG-recognized transport provider for FUNAAB students.</p>
+  </div>
+</section>
+
+<!-- APPLICATION FORM -->
+<section class="form-section">
+  <div class="container">
+    <div class="form-card">
+      <form id="transportForm">
+
+        <!-- Applicant Classification -->
+        <div class="form-group">
+          <h4>Vehicle Type Classification</h4>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" name="vehicle_type" id="shuttle" value="shuttle" checked>
+              <label for="shuttle">Intra-Campus Shuttle</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="vehicle_type" id="cab" value="cab">
+              <label for="cab">Off-Campus Cab</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="vehicle_type" id="express_bus" value="express_bus">
+              <label for="express_bus">Express Bus Operator</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Operator Bio-Data -->
+        <div class="form-group">
+          <h4>Personal Information</h4>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="full_name">Full Legal Name *</label>
+              <input type="text" id="full_name" name="full_name" required placeholder="Enter your full legal name">
+            </div>
+            <div class="form-field">
+              <label for="email">Official Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="phone">Contact Phone / WhatsApp Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+234">
+          </div>
+          <div class="form-field">
+            <label>Passport Photo Upload *</label>
+            <div class="file-upload" onclick="document.getElementById('passport').click()">
+              <input type="file" id="passport" name="passport" accept="image/*" required>
+              <div class="file-upload-text">
+                <strong>Click to upload</strong> or drag and drop<br>
+                PNG, JPG (Max 2MB)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vehicle & Fleet Specifications -->
+        <div class="form-group">
+          <h4>Vehicle Specifications</h4>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="vehicle_make">Vehicle Make *</label>
+              <input type="text" id="vehicle_make" name="vehicle_make" required placeholder="e.g., Toyota">
+            </div>
+            <div class="form-field">
+              <label for="vehicle_model">Vehicle Model *</label>
+              <input type="text" id="vehicle_model" name="vehicle_model" required placeholder="e.g., Camry">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="manufacture_year">Manufacture Year *</label>
+              <select id="manufacture_year" name="manufacture_year" required>
+                <option value="">Select Year</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="older">Older than 2015</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="vehicle_color">Vehicle Color Configuration *</label>
+              <input type="text" id="vehicle_color" name="vehicle_color" required placeholder="e.g., Silver with Green stripes">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="license_plate">License Plate Number *</label>
+            <input type="text" id="license_plate" name="license_plate" required placeholder="e.g., ABJ-123-XY" style="max-width:300px;">
+          </div>
+        </div>
+
+        <!-- Operational Details -->
+        <div class="form-group">
+          <h4>Operational Details</h4>
+          <div class="form-field">
+            <label for="route_coverage">Route Coverage *</label>
+            <input type="text" id="route_coverage" name="route_coverage" required placeholder="e.g., Camp to Campus, Camp to Oluwo, Alabata Express">
+          </div>
+          <div class="form-field">
+            <label for="operational_base">Operational Base Location *</label>
+            <input type="text" id="operational_base" name="operational_base" required placeholder="e.g., Camp Junction, Abeokuta">
+          </div>
+        </div>
+
+        <!-- Document Upload -->
+        <div class="form-group">
+          <h4>Vetting Documentation</h4>
+          <div class="form-field">
+            <label>Driver's License Upload *</label>
+            <div class="file-upload" onclick="document.getElementById('drivers_license').click()">
+              <input type="file" id="drivers_license" name="drivers_license" accept="image/*,.pdf" required>
+              <div class="file-upload-text">
+                <strong>Click to upload Driver's License</strong> or drag and drop<br>
+                PNG, JPG, PDF (Max 5MB)
+              </div>
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Road Worthiness Certificate or Vehicle Insurance *</label>
+            <div class="file-upload" onclick="document.getElementById('insurance_doc').click()">
+              <input type="file" id="insurance_doc" name="insurance_doc" accept="image/*,.pdf" required>
+              <div class="file-upload-text">
+                <strong>Click to upload document</strong> or drag and drop<br>
+                PNG, JPG, PDF (Max 5MB)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div style="margin-top:30px;">
+          <button type="submit" class="btn btn-lg" style="width:100%;">Submit Application</button>
+          <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:12px;">
+            By submitting, you agree to the SUG welfare partnership terms and conditions.
+          </p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="sug-portal.html" class="logo" style="margin-bottom:14px;">
+          <div class="logo-mark">S</div>
+          <div class="logo-text" style="color:#fff;">FUNAAB SUG</div>
+        </a>
+        <p style="font-size:13.5px;color:#7FBF9A;">The official digital portal of the FUNAAB Student Union Government, housing the Union Accommodation Agency and Union Transport Alliance under one unified platform.</p>
+      </div>
+      <div>
+        <h5>Portal</h5>
+        <ul>
+          <li><a href="sug-portal.html#home">Home</a></li>
+          <li><a href="sug-portal.html#council">Executive Council</a></li>
+          <li><a href="sug-portal.html#initiatives">Welfare Initiatives</a></li>
+          <li><a href="sug-portal.html#how">How It Works</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Apply</h5>
+        <ul>
+          <li><a href="apply-housing.html">Apply as Housing Agent</a></li>
+          <li><a href="apply-transport.html">Apply as Transport Partner</a></li>
+          <li><a href="sug-portal.html#verify">Verify Agent/Driver</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>SUG Welfare Office, FUNAAB</li>
+          <li><a href="mailto:welfare@funaabsug.org">welfare@funaabsug.org</a></li>
+          <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 FUNAAB Student Union Government. All rights reserved.</span>
+      <span>Built by P&amp;P Tech</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* File upload label update */
+  document.querySelectorAll('input[type="file"]').forEach(function(input) {
+    input.addEventListener('change', function() {
+      var fileName = this.files[0] ? this.files[0].name : 'No file selected';
+      var uploadText = this.closest('.file-upload').querySelector('.file-upload-text');
+      if (uploadText) {
+        uploadText.innerHTML = '<strong>' + fileName + '</strong>';
+      }
+    });
+  });
+
+  /* Mobile menu */
+  var menuToggle = document.querySelector('.menu-toggle');
+  var nav = document.querySelector('nav');
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', function() {
+      nav.classList.toggle('open');
+    });
+  }
+
+  /* Form submit (placeholder) */
+  document.getElementById('transportForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Application submitted successfully! You will receive a confirmation email shortly.');
+  });
+
+})();
+</script>
+
+</body>
+</html>

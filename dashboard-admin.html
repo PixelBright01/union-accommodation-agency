@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — FUNAAB SUG</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- DASHBOARD LAYOUT -->
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-user">
+      <h5>Admin User</h5>
+      <span>Welfare Directorate</span>
+    </div>
+    <ul class="sidebar-menu">
+      <li><a href="#" class="active">Dashboard</a></li>
+      <li><a href="#housing-section">Housing Agents</a></li>
+      <li><a href="#transport-section">Transport Operators</a></li>
+      <li><a href="#analytics-section">Analytics</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="sug-portal.html">Back to Portal</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="dashboard-main">
+
+    <!-- Dashboard Header -->
+    <div class="dashboard-header">
+      <h2>SUG Admin Dashboard</h2>
+      <span style="font-size:14px;color:var(--muted);">Welcome, Admin</span>
+    </div>
+
+    <!-- Analytics Cards -->
+    <div class="stat-cards" id="analytics-section">
+      <div class="stat-card">
+        <h4>Active Housing Agents</h4>
+        <div class="value">48</div>
+      </div>
+      <div class="stat-card">
+        <h4>Active Transport Operators</h4>
+        <div class="value">23</div>
+      </div>
+      <div class="stat-card">
+        <h4>Pending Submissions</h4>
+        <div class="value" style="color:var(--warning);">12</div>
+      </div>
+      <div class="stat-card">
+        <h4>Complaints / Flags</h4>
+        <div class="value" style="color:var(--danger);">3</div>
+      </div>
+    </div>
+
+    <!-- Housing Agents Section -->
+    <div id="housing-section" style="margin-bottom:40px;">
+      <h3 style="margin-bottom:20px;">Housing Agencies Clearance Queue</h3>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Business</th>
+            <th>Date Applied</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Adewale Kunle</strong></td>
+            <td>Student Agent</td>
+            <td>Kunle Homes</td>
+            <td>Jun 22, 2026</td>
+            <td><span class="status-badge pending">Pending</span></td>
+            <td>
+              <button class="btn btn-sm btn-success" onclick="approveAgent(this)">Approve</button>
+              <button class="btn btn-sm btn-danger" onclick="rejectAgent(this)">Reject</button>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Blessing Okonkwo</strong></td>
+            <td>Outside Agent</td>
+            <td>Blessing Estates</td>
+            <td>Jun 21, 2026</td>
+            <td><span class="status-badge pending">Pending</span></td>
+            <td>
+              <button class="btn btn-sm btn-success" onclick="approveAgent(this)">Approve</button>
+              <button class="btn btn-sm btn-danger" onclick="rejectAgent(this)">Reject</button>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Ibrahim Musa</strong></td>
+            <td>Student Agent</td>
+            <td>Musa Properties</td>
+            <td>Jun 20, 2026</td>
+            <td><span class="status-badge approved">Approved</span></td>
+            <td>
+              <button class="btn btn-sm" style="background:var(--muted);cursor:default;">Completed</button>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Funke Adeyemi</strong></td>
+            <td>Outside Agent</td>
+            <td>Funke Housing</td>
+            <td>Jun 19, 2026</td>
+            <td><span class="status-badge rejected">Rejected</span></td>
+            <td>
+              <button class="btn btn-sm" style="background:var(--muted);cursor:default;">Completed</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Transport Operators Section -->
+    <div id="transport-section" style="margin-bottom:40px;">
+      <h3 style="margin-bottom:20px;">Transport Operators Clearance Queue</h3>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Vehicle Type</th>
+            <th>Plate No</th>
+            <th>Route</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Oluwaseun Ajayi</strong></td>
+            <td>Shuttle</td>
+            <td>ABJ-456-XY</td>
+            <td>Camp to Campus</td>
+            <td><span class="status-badge pending">Pending</span></td>
+            <td>
+              <button class="btn btn-sm btn-success" onclick="approveDriver(this)">Approve</button>
+              <button class="btn btn-sm btn-danger" onclick="rejectDriver(this)">Reject</button>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Chukwuemeka Obi</strong></td>
+            <td>Cab</td>
+            <td>LAG-789-AB</td>
+            <td>Camp to Oluwo</td>
+            <td><span class="status-badge pending">Pending</span></td>
+            <td>
+              <button class="btn btn-sm btn-success" onclick="approveDriver(this)">Approve</button>
+              <button class="btn btn-sm btn-danger" onclick="rejectDriver(this)">Reject</button>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Garba Abdullahi</strong></td>
+            <td>Express Bus</td>
+            <td>Kano-123-CD</td>
+            <td>Alabata Express</td>
+            <td><span class="status-badge approved">Approved</span></td>
+            <td>
+              <button class="btn btn-sm" style="background:var(--muted);cursor:default;">Completed</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Recent Activity -->
+    <div>
+      <h3 style="margin-bottom:20px;">Recent Activity</h3>
+      <div style="background:var(--white);border:1px solid var(--line);border-radius:var(--radius-md);padding:20px;">
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line-light);">
+          <div>
+            <strong style="color:var(--green-primary);">Approved</strong> — Ibrahim Musa (Student Agent)
+          </div>
+          <span style="font-size:13px;color:var(--muted);">Jun 20, 2026 14:30</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line-light);">
+          <div>
+            <strong style="color:var(--danger);">Rejected</strong> — Funke Adeyemi (Outside Agent)
+          </div>
+          <span style="font-size:13px;color:var(--muted);">Jun 19, 2026 10:15</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line-light);">
+          <div>
+            <strong style="color:var(--green-primary);">Approved</strong> — Garba Abdullahi (Express Bus)
+          </div>
+          <span style="font-size:13px;color:var(--muted);">Jun 18, 2026 16:45</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;">
+          <div>
+            <strong style="color:var(--warning);">Pending</strong> — Adewale Kunle (Student Agent)
+          </div>
+          <span style="font-size:13px;color:var(--muted);">Jun 22, 2026 09:00</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script>
+function approveAgent(btn) {
+  var row = btn.closest('tr');
+  var statusBadge = row.querySelector('.status-badge');
+  statusBadge.className = 'status-badge approved';
+  statusBadge.textContent = 'Approved';
+  btn.parentElement.innerHTML = '<button class="btn btn-sm" style="background:var(--muted);cursor:default;">Completed</button>';
+}
+
+function rejectAgent(btn) {
+  var row = btn.closest('tr');
+  var statusBadge = row.querySelector('.status-badge');
+  statusBadge.className = 'status-badge rejected';
+  statusBadge.textContent = 'Rejected';
+  btn.parentElement.innerHTML = '<button class="btn btn-sm" style="background:var(--muted);cursor:default;">Completed</button>';
+}
+
+function approveDriver(btn) {
+  var row = btn.closest('tr');
+  var statusBadge = row.querySelector('.status-badge');
+  statusBadge.className = 'status-badge approved';
+  statusBadge.textContent = 'Approved';
+  btn.parentElement.innerHTML = '<button class="btn btn-sm" style="background:var(--muted);cursor:default;">Completed</button>';
+}
+
+function rejectDriver(btn) {
+  var row = btn.closest('tr');
+  var statusBadge = row.querySelector('.status-badge');
+  statusBadge.className = 'status-badge rejected';
+  statusBadge.textContent = 'Rejected';
+  btn.parentElement.innerHTML = '<button class="btn btn-sm" style="background:var(--muted);cursor:default;">Completed</button>';
+}
+</script>
+
+</body>
+</html>
